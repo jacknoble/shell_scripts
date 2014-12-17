@@ -1,7 +1,0 @@
-#!/bin/sh
-mysql -uroot -e 'drop database doximity_dev; drop database doximity_test; create database doximity_dev; create database doximity_test;'
-mysql -uroot doximity_dev < $1
-bundle exec rake db:migrate && rake db:test:clone
-bundle exec rake db:seed && rake db:seed
-bundle exec rake elasticsearch:rebuild_index
-bundle exec rake jobs:work
