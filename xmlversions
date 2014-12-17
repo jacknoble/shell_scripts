@@ -1,0 +1,6 @@
+#!/bin/sh
+XML_VERSION_FILES=`find / -name xmlversion.h | grep -v "Permission denied"`
+for file in $XML_VERSION_FILES
+do
+  cat $file | grep "#define LIBXML_DOTTED_VERSION"
+done

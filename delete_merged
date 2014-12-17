@@ -1,0 +1,6 @@
+#!/bin/sh
+OLD=`git branch --merged | grep -ve "*" -ve "master"`
+for item in $OLD
+do
+  git branch -d "$item"
+done
