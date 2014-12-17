@@ -1,3 +1,0 @@
-#!/bin/sh -x
-local prune_file=$(echo $1 | sed s/\.gz//)
-echo ${prune_file}
