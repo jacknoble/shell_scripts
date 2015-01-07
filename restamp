@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
-
-timestamp = Time.now.strftime("%Y%m%d%H%M%S")
-new_migration_name = ARGV[0].sub(/\d+/, timestamp)
-`mv #{ARGV[0]} #{new_migration_name}`
+ARGV.each do |migration|
+  timestamp = Time.now.strftime("%Y%m%d%H%M%S")
+  new_migration_name = migration.sub(/\d+/, timestamp)
+  `mv #{migration} #{new_migration_name}`
+end
