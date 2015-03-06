@@ -1,5 +1,5 @@
 #!/bin/sh
-local dir=$(pwd)
+dir=$(pwd)
 cd ~/.vim/bundle/
 git clone $1
 cd ${dir}
