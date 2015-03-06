@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+COLOR_VALS = {
+  "green" => [70, 161, 88],
+  "purple" => [85, 15, 119],
+  "red" => [185, 45, 45],
+  "blue" => [63, 214, 238]
+}.freeze
+
+def change_color(color)
+  vals=COLOR_VALS[color]
+  puts "\033]6;1;bg;red;brightness;#{vals[0]}\a"
+  puts "\033]6;1;bg;green;brightness;#{vals[1]}\a"
+  puts "\033]6;1;bg;blue;brightness;#{vals[2]}\a"
+end
+
+change_color(ARGV[0])
