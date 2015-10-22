@@ -1,3 +1,0 @@
-#!/bin/sh
-DIR=`pwd | grep -o '.*/code/[a-zA-Z_]*'`
-cd ${DIR}
