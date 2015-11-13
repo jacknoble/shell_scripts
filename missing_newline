@@ -1,2 +1,1 @@
-#!bin/sh
 for file in $(ack -f); do test $(tail -c 1 $file) && echo $file; done
